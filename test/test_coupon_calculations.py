@@ -36,5 +36,17 @@ class MyTestCase(unittest.TestCase):
         test_price_under_fifty.assertEqual(45.87, coupon_calculations.calculate_order(50, 10, .20))
         test_price_under_fifty.assertEqual(43.75, coupon_calculations.calculate_order(50, 10, .25))
         test_price_under_fifty.assertEqual(37.63, coupon_calculations.calculate_order(50, 10, .30))
+
+    def test_over_50(test_price_over_fifty):
+        test_price_over_fifty.assertEqual(54.88, coupon_calculations.calculate_order(60, 5, .10))
+        test_price_over_fifty.assertEqual(52.50, coupon_calculations.calculate_order(50, 5, .15))
+        test_price_over_fifty.assertEqual(50.11, coupon_calculations.calculate_order(50, 5, .20))
+        test_price_over_fifty.assertEqual(47.72, coupon_calculations.calculate_order(50, 5, .25))
+        test_price_over_fifty.assertEqual(45.34, coupon_calculations.calculate_order(50, 5, .30))
+        test_price_over_fifty.assertEqual(50.11, coupon_calculations.calculate_order(50, 10, .10))
+        test_price_over_fifty.assertEqual(47.99, coupon_calculations.calculate_order(50, 10, .15))
+        test_price_over_fifty.assertEqual(45.87, coupon_calculations.calculate_order(50, 10, .20))
+        test_price_over_fifty.assertEqual(43.75, coupon_calculations.calculate_order(50, 10, .25))
+        test_price_over_fifty.assertEqual(37.63, coupon_calculations.calculate_order(50, 10, .30))
 if __name__ == '__main__':
     unittest.main()
