@@ -10,22 +10,22 @@ Module 4 - Nested if statements
 def calculate_order(price, cash_coupon, percent_coupon):
     TAX = .06
     total_coupon1 = (float(price) - float(cash_coupon))
-    total_coupons = total_coupon1 - (total_coupon1 * float(percent_coupons))
+    total_coupons = total_coupon1 - (total_coupon1 * float(percent_coupon))
     total_tax = total_coupons + (total_coupons * TAX)
     if total_coupons >= 50:
-        return total_tax
+        return round(total_tax, 2)
     elif total_coupons >= 30:
         shipping_cost = 11.95
         total = total_tax + shipping_cost
-        return total
+        return round(total, 2)
     elif total_coupons >= 10:
         shipping_cost = 7.95
         total = total_tax + shipping_cost
-        return total
+        return round(total, 2)
     else:
         shipping_cost = 5.95
         total = total_tax + shipping_cost
-        return total
+        return round(total, 2)
 
 
 if __name__ == '__main__':
